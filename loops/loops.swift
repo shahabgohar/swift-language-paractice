@@ -4,6 +4,6 @@ let taylor = (name: "taylor", password: "fr0st1es")
 
 let users = [twoStraws, bilbo, taylor]
 
-for user in users {
-    print(user.name)
+for case("shahab","iampassword") in users {
+    print("user found with the name shahab")
 }
