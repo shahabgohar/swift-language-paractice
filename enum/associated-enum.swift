@@ -17,3 +17,15 @@ default:
     print("touched the default")
     
 }
+
+// filter with associated values
+
+switch today {
+case .cloudy(let coverage) where coverage < 100:
+    print("today is cloudy with coverage \(coverage)")
+case .cloudy(let coverage) where coverage == 100:
+    print("you must live in UK \(coverage)")
+default:
+    print("touched the default")
+    
+}
