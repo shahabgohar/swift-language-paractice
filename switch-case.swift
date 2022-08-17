@@ -1,7 +1,9 @@
 let name = "twostraws"
 let password = "iampassword"
 
-switch (name, password) {
+let authentication = (name: "twostraws", password:"iampassword")
+
+switch authentication {
 case ("bilbo", "iampassword"):
     print("Hello, Bilbo")
 
