@@ -1,10 +1,11 @@
 let name = "twostraws"
+let password = "iampassword"
 
-switch name {
-case "bilbo":
+switch (name, password) {
+case ("bilbo", "iampassword"):
     print("Hello, Bilbo")
 
-case "twostraws":
+case ("twostraws", "iampassword"):
     print("Hello, twostraws !")
     
 default: 
