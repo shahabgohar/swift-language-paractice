@@ -29,3 +29,27 @@ default:
     print("touched the default")
     
 }
+
+// filter with associated values and range
+
+
+switch today {
+case .cloudy(let coverage) where coverage == 0:
+    print("you ust live in death valley")
+
+case .cloudy(let coverage) where (1...50).contains(coverage):
+    print("it is a bit cloudy with coverage of \(coverage) %")
+
+case .cloudy(let coverage) where(51...99).contains(coverage):
+    print("its very cloudy with a coverage of \(coverage) %")
+
+case .cloudy(let coverage) where coverage == 100:
+    print("you must be living in UK")
+
+case .windy:
+    print("today is windy")
+
+default: 
+    print("today is sunny")
+    
+}
