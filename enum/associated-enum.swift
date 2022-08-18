@@ -53,3 +53,11 @@ default:
     print("today is sunny")
     
 }
+
+// where you can use where in swift
+/**
+* you can use where keyword in a case label of a switch statement,
+* a catch clause of a do statement, or in the case condition of an if, 
+* while, guard, for-in statement, or to define type constraints.
+*
+***/
