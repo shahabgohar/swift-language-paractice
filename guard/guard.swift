@@ -1,13 +1,13 @@
-func giveAwards(name: String) {
-    guard name == "shahab" else{
+func giveAwards(name: String?) {
+    guard let winner = name else{
         print("No way !")
         return
     }
 
-    print("congratulations \(name) !")
+    print("congratulations \(winner) !")
     
 }
 
 giveAwards(name: "shahab")
 
-giveAwards(name: "temp")
+giveAwards(name: nil)
