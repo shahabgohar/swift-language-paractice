@@ -2,14 +2,11 @@ enum MyError: Error {
     case runtimeError(String)
 }
 
-func somethingPerforming() throws {
+func somethingPerforming() throws -> String {
     throw MyError.runtimeError("unknow error occured")
-    
     print("hello i am performing something !!!!")
+    return ""
 }
 
-do {
-    try somethingPerforming()
-} catch MyError.runtimeError(let errorMessage) {
-    print(errorMessage)
-}
+let temp: Any = (try? somethingPerforming()) ?? "failed to execute"
+print(temp)
