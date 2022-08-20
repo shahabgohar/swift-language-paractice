@@ -13,7 +13,7 @@ enum DistanceTechnique {
     case manhattan
 }
 
-func calculateDistance(start: Point, end: Point, technique: DistanceTechnique) -> Double {
+func calculateDistance(technique: DistanceTechnique) -> (Point, Point) -> Double {
 
     func calculateEucledianDistanceSquared(start: Point, end: Point) ->Double {
         let deltaX = start.x - end.x
@@ -32,14 +32,14 @@ func calculateDistance(start: Point, end: Point, technique: DistanceTechnique) -
 
     switch technique {
         case .eucledian : 
-            return calculateEuclideanDistance(start: start, end: end)
+            return calculateEuclideanDistance
         case .eucledianSquared: 
-            return calculateEucledianDistanceSquared(start: start, end: end)
+            return calculateEucledianDistanceSquared
         case .manhattan: 
-            return calculateManhattanDistance(start: start, end: end)
+            return calculateManhattanDistance
     }
 }
 
-let distance = calculateDistance(start: Point(x: 10, y: 10), end: Point(x: 100, y: 100), technique: .eucledian)
-
+let distanceAlgorithm = calculateDistance(technique: .eucledian)
+let distance = distanceAlgorithm(Point(x: 10, y: 10), Point(x: 100, y: 100))
 print(distance)
