@@ -20,3 +20,10 @@ let int2 = Int(str2) ?? 0
 
 print(int2)
 // true
+
+// unique arrays
+let scores = [1,2,2,4,5,2,3,4,3,3,7,7,8]
+let scoresSet = Set(scores)
+let uniqueScores = Array(scoresSet)
+
+print(uniqueScores)
