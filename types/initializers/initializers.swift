@@ -27,3 +27,6 @@ let scoresSet = Set(scores)
 let uniqueScores = Array(scoresSet)
 
 print(uniqueScores)
+
+// dictionay capcities
+let dictionay = Dictionary<String, String>(minimumCapacity: 100)
