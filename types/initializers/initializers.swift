@@ -30,3 +30,43 @@ print(uniqueScores)
 
 // dictionay capcities
 let dictionay = Dictionary<String, String>(minimumCapacity: 100)
+
+// raw values enum
+
+enum Color:Int, CaseIterable {
+    case unknown, blue, green, pink, purple, red
+}
+
+for color in Color.allCases {
+    print(color.rawValue)
+}
+
+// output would be 
+/**
+0
+1
+2
+3
+4
+5
+**/
+
+enum Planet: Int, CaseIterable {
+ case mercury = 1
+ case venus
+ case earth
+ case mars
+ case unknown
+}
+
+for planet in Planet.allCases {
+    print(planet.rawValue)
+}
+// output would be
+/**
+1
+2
+3
+4
+5
+**/
